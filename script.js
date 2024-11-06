@@ -1,3 +1,29 @@
+function locomativeAnimation(){
+    gsap.registerPlugin(ScrollTrigger);
+
+
+const locoScroll = new LocomotiveScroll({
+  el: document.querySelector("#main"),
+  smooth: true
+});
+locoScroll.on("scroll", ScrollTrigger.update);
+
+ScrollTrigger.scrollerProxy("#main", {
+  scrollTop(value) {
+    return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+  }, 
+  getBoundingClientRect() {
+    return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
+  },
+  pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
+});
+
+
+ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+ScrollTrigger.refresh();
+
+} 
 function loadingAnimation(){
     var tl = gsap.timeline()
 tl.from(".line h1 ,#h1",{
@@ -18,7 +44,7 @@ tl.from("#line1-part1 ",{
          }else{
             h5timer.innerHTML = grow
          }
-        },35)
+        },28)
     }
 });
 tl.to('.line h2',{
@@ -47,6 +73,9 @@ tl.from("#hero1 h1 ,#hero2 h1 ,#hero5 h2 ,#hero4 h1",{
     y:130,
     stagger:0.2
 })
+tl.from("#hero1 , #page2",{
+    opacity:0,
+},"-=1.2");
 }
 function cursurAnimation(){
     const crsr = document.querySelector('#crsr');
@@ -62,4 +91,4 @@ Shery.makeMagnet("#nav-part2 h4");
 }
 loadingAnimation()
 cursurAnimation()
-
+locomativeAnimation()

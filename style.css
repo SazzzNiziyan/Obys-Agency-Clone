@@ -1,3 +1,22 @@
+@font-face {
+    font-family: "Plain Light";
+    src: url(./fonts/plain-regular-webfont.ttf);
+}
+
+@font-face {
+    font-family: "Plain Light";
+    src: url(./fonts/plain-light-webfont.ttf);
+}
+
+@font-face {
+    font-family: "silk serif";
+    src: url(./fonts/silkserif-regularitalic-webfont.ttf);
+}
+
+@font-face {
+    font-family: "silk serif";
+    src: url(./fonts/silkserif-lightitalic-webfont.ttf);
+}
 * {
     padding: 0;
     margin: 0;
@@ -8,7 +27,7 @@
 html,body{
     height: 100%;
     width: 100%;
-    /* cursor: none; */
+    cursor: none;
 }
 body {
     overflow-x: hidden;
@@ -20,17 +39,17 @@ body {
     /* background-color: #fff; */
     border: 1px solid rgb(200, 195, 195);
     position: fixed;
-    z-index: 9999;
-    mix-blend-mode: difference;
+    z-index: 999;
+    mix-blend-mode:difference;
     transform: translate(-50%,-50%);
 }
 #loader{
     height: 100%;
     width:100%;
     position: fixed;
-    z-index: 99999;
+    z-index: 9999;
     background-color: #020202;
-    padding: 20vh 10vw;
+    padding: 25vh 10vw;
 }
 .line{
     height: fit-content;
@@ -118,6 +137,7 @@ body {
 #main{
     background-color:  #151515;
     position: relative;
+    z-index: 99;
 }
 #page1{
     height: 100vh;
