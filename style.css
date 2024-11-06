@@ -1,0 +1,451 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Plain light";
+    color: azure;
+} 
+html,body{
+    height: 100%;
+    width: 100%;
+    /* cursor: none; */
+}
+body {
+    overflow-x: hidden;
+}
+#crsr{
+    height: 2.3vw;
+    width: 2.3vw;
+    border-radius: 50%;
+    /* background-color: #fff; */
+    border: 1px solid rgb(200, 195, 195);
+    position: fixed;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transform: translate(-50%,-50%);
+}
+#loader{
+    height: 100%;
+    width:100%;
+    position: fixed;
+    z-index: 99999;
+    background-color: #020202;
+    padding: 20vh 10vw;
+}
+.line{
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3vw;
+}
+#line1-part1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+#line1-part1 h5, #line1-part1 h6{
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: 'Silk serif';
+}
+#line1-part1 h5{
+    width: 5vw;
+    text-align: right;
+}
+.line h1{
+    font-size: 6.5vw;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.line h2{
+    font-size: 5vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    opacity: 0;
+    animation-duration: 1.5s;
+    animation-iteration-count: 2;
+}
+@keyframes loderAnime{
+    0%{
+        font-family: "plain light";
+        -webkit-text-stroke: 1px #fff;
+        font-weight: 500;
+        opacity: 1;
+    }
+    48%{
+        font-family: "plain light";
+        -webkit-text-stroke: 1px #fff;
+        font-weight: 500;
+        opacity: 0;
+    }
+    50%{
+        font-family: "silk serif";
+        -webkit-text-stroke: .2px #fff;
+        font-weight: 500;
+        color: transparent;
+        opacity: 1;
+    }
+    100%{
+        font-family: "silk serif";
+        -webkit-text-stroke: .2px #fff;
+        font-weight: 500;
+        color: transparent;
+        opacity: 0;
+    }
+}
+@keyframes anime-l{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.2;
+    }
+}
+#h1{
+    margin-top: 6vh;
+    margin-left: 10vw;
+    animation-name: anime-l;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#main{
+    background-color:  #151515;
+    position: relative;
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    /* background-color: #151515; */
+    position: relative;
+    z-index: 100;
+}
+#page1 #nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.3vw 5.5vw;
+}
+#nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+}
+#nav-part2 h4{
+    font-size: 0.8vw;
+    font-family: 800;
+}
+.hero{
+    width: 73%;
+    margin-left: 27%;
+    height: fit-content;
+    overflow-y: hidden;  
+    display: flex;
+    align-items: center;
+    z-index: 999;
+}
+
+.hero:nth-child(2){
+    margin-top: 15vh;
+}
+.hero h1{
+    font-size: 7.2vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 7.2vw;
+    position: relative;
+}
+#hero1::before{
+    content: "01";
+    position : absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: 'silk serif';
+    left: 19%;
+    top: 29%;
+}
+
+.hero h2{
+    font-size: 7.2vw;
+     font-weight: 600;
+    text-transform: uppercase;
+    line-height: 7.2vw;
+    border-bottom: 0.4vw solid #fff;
+    padding-bottom: 0.8vw;
+    /* transition:All ease 0.3s; */
+    
+}
+
+.hero h2:hover{
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 500;
+    border-bottom: 0.5vw solid #151515;
+}
+
+#page2 {
+    height: 100%;
+    width: 100%;
+    padding-top: 17vh;
+    position: relative;
+}
+
+
+#video-container{
+    height: 66vh;
+    width: 71vw;
+    position: relative;
+    left: 27%;
+    background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
+}
+#video-container img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+}
+
+#video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#video-crsr{
+    background-color: #FFA63D;
+    height: 8vw;
+    width: 8vw;
+    border-radius: 50%;
+    position: absolute;
+    top: -10%;
+    left: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+#video-crsr i{
+    font-size: 2vw;
+}
+
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.178);
+}
+
+#page4{
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    padding-top: 7vh 0;
+}
+
+#page4-content{
+    width: 72vw;
+    position: relative;
+    margin-left: 28%;
+}
+
+#page4-content h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position:relative;
+}
+#page4-content h1::before{
+    content: "03";
+    position : absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: 'silk serif';
+    left: -12%;
+    top: 8%;
+}
+
+#page4-content .underline{
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    margin: 5vw 0;
+}
+
+#page4-content>p{
+    font-size: 2.05vw;
+    width: 50%;
+    MARGIN-BOTTOM: 3vw;
+}
+
+#page4-flex{
+    display: flex;
+}
+
+#page4-flex img{
+    width: 48%;
+}
+
+#page4-flex p{
+    font-size: 0.9vw;
+    width: 19%;
+    margin-left: 1vw;
+}
+
+#page4-blue-div{
+    background-color: #3F7DF4;
+    width: 33vw;
+    padding: 3vw;
+    position: relative;
+    margin-top: -31vh;
+    margin-left: 24vw;
+
+}
+
+.blue-div-elem{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.9vw 0;
+    border-bottom: 1px solid #ffffff5e;
+}
+
+.blue-div-elem h4{
+    font-size: 1.4vw;
+    font-weight: 500;
+}
+
+.blue-div-elem p{
+    font-size: 0.8vw;
+    width: 40%;
+    font-weight: 600;
+}
+
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+.elem{
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: -2vw;
+}
+
+.elem h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    margin-right: 16px;
+    animation-name: anime-2;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes anime-2{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+.elem2{
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: -1vw;
+}
+
+.elem2 h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    margin-right: 16px;
+    transform: translateX(calc( -100% - 20px));
+    animation-name: anime-2;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+
+}
+
+.elem span{
+    font-style: italic;
+    font-family: 'silk serif';
+    color: transparent;
+}
+.elem2 span{
+    font-style: italic;
+    font-family: 'silk serif';
+    color: transparent;
+}
+
+#footer{
+    height: 85vh;
+    width: 100%;
+    position: relative;
+    padding-left: 28vw;
+    padding-right: 2vw;
+}
+
+#footer h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+}
+#footer h1::before{
+    content: "04";
+    position : absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: 'silk serif';
+    left: -12%;
+    top: 8%;
+}
+
+.underline{
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    margin: 3vw 0;
+}
+.footer-div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-right: 15vw;
+    padding-top: 4vw;
+    margin-bottom: 0vw;
+}
+
+.footer-div h6{
+    font-size: 0.9vw;
+    margin-bottom: 1.5vw;
+    font-weight: 500;
+}
+.box{
+    width: 22%
+}
+.footer-div h5{
+    font-size: 1.4vw;
+    font-weight: 500;
+    margin: 0.2vh 0;
+} 
+
+footer>h5{
+    font-weight: 500;
+    font-size: 1vw;
+}
