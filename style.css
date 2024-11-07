@@ -27,7 +27,7 @@
 html,body{
     height: 100%;
     width: 100%;
-    cursor: none;
+    /* cursor: none; */
 }
 body {
     overflow-x: hidden;
@@ -211,7 +211,7 @@ body {
 }
 
 #page2 {
-    height: 100%;
+    height: 100vh;
     width: 100%;
     padding-top: 17vh;
     position: relative;
@@ -258,14 +258,55 @@ body {
 #page3{
     min-height: 100vh;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.178);
+    position: relative;
+    padding: 8vh 2vw;
+    margin-bottom: 30vh;
+}
+#page3 h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position:relative;
+    margin-left: 28vw;
+}
+#page3 h1::before{
+    content: "02";
+    position : absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: 'silk serif';
+    left: -12%;
+    top: 8%;
+}
+#page3 .underline{
+    margin-left: 28vw;
+}
+#image-div-container{
+    padding: 1vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
+.image-div{
+    height: 33vw;
+    position: relative;
+    overflow: hidden;
+    width: 24vw;
+    flex-shrink: 0;
+}
+.image-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 #page4{
     min-height: 100vh;
     position: relative;
     width: 100%;
-    padding-top: 7vh 0;
+    padding: 7vh 0;
 }
 
 #page4-content{
@@ -465,7 +506,12 @@ body {
     margin: 0.2vh 0;
 } 
 
-footer>h5{
+#footer>h5{
     font-weight: 500;
     font-size: 1vw;
+}
+
+._canvas_container{
+    z-index: 999999 !important;
+    pointer-events: none;
 }
