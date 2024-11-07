@@ -84,8 +84,8 @@ body {
     font-weight: 900;
     text-transform: uppercase;
     opacity: 0;
-    animation-duration: 1.5s;
-    animation-iteration-count: 2;
+    animation-duration: 1.7s;
+    animation-iteration-count: 1;
 }
 @keyframes loderAnime{
     0%{
@@ -259,7 +259,7 @@ body {
     min-height: 100vh;
     width: 100%;
     position: relative;
-    padding: 8vh 2vw;
+    padding: 17vh 2vw;
     margin-bottom: 30vh;
 }
 #page3 h1{
@@ -284,23 +284,57 @@ body {
     padding: 1vw;
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: flex-start;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
 .image-div{
-    height: 33vw;
+    height: 38vw;
+    width: 27vw;
     position: relative;
     overflow: hidden;
-    width: 24vw;
     flex-shrink: 0;
+    margin: 2vw;
+}
+.image-div:nth-child(1){
+    height: 29vw;
+    width: 21vw;
 }
 .image-div img{
     height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: center;
+}
+.page3-circle{
+    height: 23vw;
+    width: 23vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    margin-top: 23vh;
+    align-items: center;
+    margin-left: 10vw;
+    justify-content: center;
+}
+.page3-circle svg{
+    height: 39%;
+}
+.page3-circle2{
+    height: 23vw;
+    width: 23vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    /* margin-top: 23vh; */
+    align-items: center;
+    /* margin-left: 10vw; */
+    justify-content: center;
+}
+.page3-circle2 svg{
+    height: 39%;
+    rotate: -45deg;
 }
 #page4{
     min-height: 100vh;
