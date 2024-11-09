@@ -24,6 +24,12 @@ ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
 
 } 
+
+
+
+
+
+
 function loadingAnimation(){
     var tl = gsap.timeline()
 tl.from(".line h1 ,#h1",{
@@ -77,6 +83,10 @@ tl.from("#hero1 , #page2",{
     opacity:0,
 },"-=1.2");
 }
+
+
+
+
 
 
 
@@ -135,6 +145,15 @@ videoContainer.addEventListener("click",function(){
     }
 })
 }
+
+
+
+
+
+
+
+
+
 function sheryAnimation(){
     Shery.imageEffect(".image-div",{
         style:5,
@@ -142,6 +161,13 @@ function sheryAnimation(){
         gooey:true
     })
 }
+
+
+
+
+
+
+
 function FlagAnimation(){document.addEventListener("mousemove",
     function(dets){
         gsap.to("#flag",{
@@ -163,6 +189,15 @@ function FlagAnimation(){document.addEventListener("mousemove",
         })
     })
 }
+
+
+
+
+
+
+
+
+
 function footerAnimation() {
 
     var clutter = ""
@@ -203,6 +238,9 @@ function footerAnimation() {
   }
     
 
+
+
+// calling function 
 loadingAnimation()
 cursurAnimation()
 locomativeAnimation()
