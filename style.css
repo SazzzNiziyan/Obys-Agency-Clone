@@ -530,6 +530,30 @@ body {
     text-transform: uppercase;
     position: relative;
 }
+
+#footer-text {
+    position: relative;
+}
+
+#footer-text h2 {
+    font-size: 7.2vw;
+    text-transform: uppercase;
+    position: absolute;
+    top: -10%;
+    font-weight: 500;
+
+    left: 0;
+    font-family: "silk serif";
+}
+
+#footer-text h2 span {
+    font-family: "silk serif";
+    opacity: 0;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+}
+
+
 #footer h1::before{
     content: "04";
     position : absolute;
