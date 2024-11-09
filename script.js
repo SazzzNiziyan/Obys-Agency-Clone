@@ -85,6 +85,8 @@ function cursurAnimation(){
     });
 Shery.makeMagnet("#nav-part2 h4");
 
+
+
 var videoContainer = document.querySelector("#video-container");
 var video = document.querySelector("#video-container video")
 videoContainer.addEventListener("mouseenter",function(){
@@ -94,7 +96,7 @@ videoContainer.addEventListener("mouseenter",function(){
             })
             gsap.to("#video-crsr",{
             left:dets.x - 430,
-            top:dets.y - 300
+            y:dets.y - 300,
         })
     })
 })
@@ -103,8 +105,8 @@ videoContainer.addEventListener("mouseleave",function(){
         opacity:1,
     });
     gsap.to("#video-crsr",{
-        top: "-10%" ,
-        left: "80%" ,
+        top: "-15%" ,
+        left: "70%" ,
     })
 });
 
@@ -127,9 +129,6 @@ videoContainer.addEventListener("click",function(){
         })
         flag = 0
     }
-
-    
-
 })
 }
 function sheryAnimation(){
@@ -145,3 +144,25 @@ loadingAnimation()
 cursurAnimation()
 locomativeAnimation()
 sheryAnimation()
+
+
+document.addEventListener("mousemove",
+function(dets){
+    gsap.to("#flag",{
+        x:dets.x,
+        y:dets.y
+    })
+})
+document.querySelector("#hero5").addEventListener("mouseenter",
+    function(){
+        gsap.to("#flag",{
+            opacity : 1
+        })
+    })
+    
+document.querySelector("#hero5").addEventListener("mouseleave",
+function(){
+    gsap.to("#flag",{
+        opacity : 0
+    })
+})
