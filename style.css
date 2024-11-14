@@ -36,7 +36,7 @@ body {
 
 .mousefollower{
     border: 2px solid #fff;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255,);
     scale: 2;
     mix-blend-mode: difference;
 }
@@ -658,4 +658,9 @@ body {
 #hero5 ,#hero2 ,#hero4 {
     z-index: 999;
     position: relative;
+}
+
+
+@media (max-width: 600px){
+
 }

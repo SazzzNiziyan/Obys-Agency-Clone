@@ -89,7 +89,6 @@ tl.from("#hero1 , #page2",{
 
 
 
-
 function cursurAnimation(){
     Shery.mouseFollower({
         skew:true,
@@ -97,7 +96,7 @@ function cursurAnimation(){
         duration:.1,
     });
 
-    Shery.makeMagnet("#nav-part2 h4");
+    Shery.makeMagnet("#nav-part2 h4")
 
 
 
