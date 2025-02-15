@@ -33,6 +33,10 @@ The Obys Agency Clone project aims to replicate the design and animations of the
 
 This project demonstrates various web development techniques, including the use of GSAP for animations, responsive design with CSS, and structuring HTML for a clean and modern user interface.
 
+##Preview/Screenshot
+
+![Obys Agency](https://github.com/ritesh5001/Obys-Design-Agency/blob/f884fdc3f6bea77e900e9f42c61a6eeca99f1e34/Obys%20Agency.gif)
+
 ## Features
 
 - **Smooth Animations:** Implemented using GSAP for high-performance animations.
